@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <meta name="theme-color" content="#101619" />
+  <title>Neon District — Last Run</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="Neon District top-down city game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">N</span><div><strong>NEON DISTRICT</strong><small>LOS SANTOS COUNTY · 02:17 AM</small></div></div>
+      <div class="top-right"><div class="cash"><small>WALLET</small><strong id="cash">$2,450</strong></div><div class="radio"><span class="eq">▂ ▅ ▃ ▆ ▂</span><div><small>NOW PLAYING</small><strong>Midnight Run <i>FM</i></strong></div></div></div>
+    </header>
+    <section class="mission-card" id="mission-card"><div class="mission-label"><span class="pulse"></span> CURRENT JOB <span class="job-tag">01</span></div><h1 id="mission-title">A QUICK FAVOR</h1><p id="mission-copy">Pick up the package. Keep it quiet.</p><div class="mission-footer"><span id="mission-status">GO TO THE PICKUP</span><span id="distance">— M</span></div><div class="progress-track"><i id="mission-progress"></i></div></section>
+    <div class="wanted"><span class="wanted-label">WANTED</span><div id="stars" class="stars">☆ ☆ ☆ ☆ ☆</div><small id="wanted-note">KEEP A LOW PROFILE</small></div>
+    <div class="speedometer" id="speedometer"><div class="speed-ring"><span id="speed">000</span><small>KM/H</small></div><div class="gear">GEAR <b id="gear">P</b></div></div>
+    <div class="map-frame"><canvas id="minimap" width="180" height="180"></canvas><div class="map-tag">SOUTH LOS SANTOS <span>▴</span></div></div>
+    <div class="toast" id="toast">Find a ride. Make it count.</div>
+    <div class="controls-hint" id="controls-hint"><kbd>WASD</kbd> MOVE <span>·</span> <kbd>E</kbd> ENTER / EXIT <span>·</span> <kbd>SHIFT</kbd> SPRINT</div>
+    <button class="sound-button" id="sound-button" aria-label="Toggle sound">♪ <span>SOUND ON</span></button>
+    <div class="touch-controls" id="touch-controls">
+      <div class="dpad"><button data-key="ArrowUp">▲</button><div><button data-key="ArrowLeft">◀</button><button data-key="ArrowDown">▼</button><button data-key="ArrowRight">▶</button></div></div>
+      <div class="touch-actions"><button data-action="interact">E<br><small>USE</small></button><button data-action="boost">⚡<br><small>BOOST</small></button></div>
+    </div>
+    <div class="intro" id="intro"><div class="intro-panel"><div class="intro-eyebrow"><span></span> A NEON DISTRICT STORY</div><h2>ONE LAST<br><em>RUN.</em></h2><p>Night work pays better. Usually.</p><div class="intro-rule"></div><div class="intro-controls"><div><kbd>W A S D</kbd><span>Move / drive</span></div><div><kbd>E</kbd><span>Enter / exit</span></div><div><kbd>SHIFT</kbd><span>Sprint / handbrake</span></div></div><button id="start-button">START THE JOB <b>↗</b></button><small class="intro-foot">A SMALL-TIME JOB IN A BIG-TIME CITY</small></div></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
